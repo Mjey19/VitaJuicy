@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");
+body {
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  min-height: 100vh;
+}
+body::-webkit-scrollbar {
+  width: 1em;
+}
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #f1f1f1;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #fecf3d;
+  border-radius: 10px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  width: 100%;
+  min-height: 80vh;
+  flex-grow: 1;
+  position: relative;
+  .drawer {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100%;
+    background: rgba(196, 196, 196, 0.76);
+    .cart {
+      overflow: hidden;
+      position: sticky;
+      top: 160px;
+      left: 70vw;
+      z-index: 1000;
+      width: 521px;
+      min-height: 603px;
+      border-radius: 50px;
+      background-color: white;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      .total-price_block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        padding: 28px 26px;
+        bottom: 40px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #fecf3d;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        color: #2b2a29;
+      }
+      .drawer-inner {
+        display: flex;
+        flex-direction: column;
+        max-height: 384px;
+        overflow-y: auto;
+        ::-webkit-scrollbar {
+          width: 1em;
+        }
+        ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 6px #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+          background-color: #fecf3d;
+          border-radius: 10px;
+        }
+        .drawer-card {
+          max-height: 270px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 8px dashed #2b2a29;
+          .drawer-card_img {
+            max-width: 145px;
+            max-height: 181px;
+          }
+          .drawer-card_inf {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            p {
+              color: #2b2a29;
+              font-size: 25px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              text-transform: uppercase;
+            }
+            span {
+              color: #2b2a29;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              text-transform: uppercase;
+            }
+            h5 {
+              color: #797272;
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              text-transform: uppercase;
+            }
+            .count-block {
+              ul {
+                display: flex;
+                width: 93px;
+                align-items: center;
+                justify-content: space-evenly;
+                background-color: #fecf3d;
+                border-radius: 30px;
+                li {
+                  cursor: pointer;
+                  font-size: 20px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                  text-transform: uppercase;
+                }
+              }
+            }
+          }
+          .delete-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 70px;
+            .price {
+              color: #2b2a29;
+              font-size: 25px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              text-transform: uppercase;
+            }
+            img {
+              cursor: pointer;
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .catalog {
+    .catalog_title-block {
+      width: 100%;
+      height: 164px;
+      background-color: #6b9d52;
+      h1 {
+        display: flex;
+        justify-content: center;
+        padding: 35px 0;
+        color: #fff;
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+      }
+    }
+      .menu-inner {
+        margin: 10px 40px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        .__hits-card {
+          transition: 0.2s ease-in-out;
+          width: 420px;
+          height: 511px;
+          text-align: center;
+          border-radius: 50px;
+          &:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 20px 50px 0px rgba(77, 75, 73, 0.2);
+          }
+          .card-img {
+            margin-bottom: 10px;
+            width: 258px;
+            height: 274px;
+            object-fit: contain;
+          }
+          p {
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+            color: #2b2a29;
+          }
+          span {
+            color: #797272;
+            text-align: center;
+            font-family: Bahnschrift;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+          div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            img {
+              width: 36px;
+              height: 33px;
+              cursor: pointer;
+            }
+            span {
+              font-size: 40px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              text-transform: uppercase;
+              color: #2b2a29;
+            }
+          }
+          .add-card {
+            margin-top: 10px;
+            color: #2b2a29;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+            padding: 15px 37px;
+            background-color: #fecf3d;
+            border-radius: 30px;
+          }
+        }
+      }
+    }
+  }
+
