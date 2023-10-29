@@ -9,7 +9,7 @@ const DrawerSlice = createSlice({
   initialState,
   reducers: {
     AddCard(state, action) {
-      const findItem = state.items.find((obj) => obj.name === action.payload);
+      const findItem = state.items.find((obj) => obj.id === action.payload.id);
       if (findItem) {
         findItem.count++;
       } else {
@@ -17,7 +17,7 @@ const DrawerSlice = createSlice({
       }
     },
     DeleteCard(state, action) {
-     state.items = state.items.filter((obj) => obj.name != action.payload);
+     state.items = state.items.filter((obj) => obj.id != action.payload);
     },
   },
 });
